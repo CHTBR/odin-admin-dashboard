@@ -28,6 +28,11 @@ nav {
   gap: 4rem;
 }
 
+nav section {
+  display: grid;
+  gap: 0.5em;
+}
+
 main {
   grid-area: main;
   display: grid;
