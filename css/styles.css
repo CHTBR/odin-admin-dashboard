@@ -8,7 +8,7 @@ body, h1, h2, h3, p {
 body {
   height: 100vh;
   display: grid;
-  grid: 15% 85% / 1fr 5fr;
+  grid: 15% 85% / 1fr 4fr;
   grid-template-areas:
     "nav header"
     "nav main"
@@ -43,6 +43,7 @@ main {
   grid-area: main;
   display: grid;
   grid: 50% 50% / 3fr 1fr;
+  gap: 2rem;
 }
 
 main .your-projects > div,
@@ -71,12 +72,13 @@ main .your-projects article {
 
 main .announcments {
   display: grid;
-  grid-template-rows: 5% 95% ;
+  grid-template-rows: 10% 90% ;
 }
 
 main .announcments > div {
   display: grid;
-  grid-template-rows: repeat(3, calc(100%/3))
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 main .announcments article {
@@ -85,10 +87,15 @@ main .announcments article {
   grid-template-rows: auto 1fr;
 }
 
+main .trending {
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+
 main .trending > div {
   font-size: 0.8rem;
   display: grid;
-  grid-template-rows: repeat(4, calc(25%));
+  grid-template-rows: repeat(4, 1fr);
   gap: 1rem;
 }
 
@@ -120,10 +127,10 @@ main .your-projects article {
   background-color: white;
 }
 
-main .announcments {
+main .announcments > div {
   background-color: white;
 }
 
-main .trending {
+main .trending > div {
   background-color: white;
 }
