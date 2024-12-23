@@ -1,8 +1,14 @@
+/* Reset */
+body, h1, h2, h3, p {
+  margin: 0;
+}
+
+
 /* Layout */
 body {
   height: 100vh;
   display: grid;
-  grid: 1fr 6fr / 1fr 5fr;
+  grid: 15% 85% / 1fr 5fr;
   grid-template-areas:
     "nav header"
     "nav main"
@@ -36,5 +42,61 @@ nav section {
 main {
   grid-area: main;
   display: grid;
-  grid: 1fr 1fr / 3fr 1fr;
+  grid: 50% 50% / 3fr 1fr;
+}
+
+main .your-projects > div,
+main .announcments > div,
+main .trending > div {
+  padding: 1rem;
+}
+
+main .your-projects {
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+
+main .your-projects > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  grid-auto-rows: 1fr;
+}
+
+main .your-projects article {
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+}
+
+main .announcments {
+  display: grid;
+  grid-template-rows: 5% 95% ;
+}
+
+main .announcments > div {
+  display: grid;
+  grid-template-rows: repeat(3, calc(100%/3))
+}
+
+main .announcments article {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+main .trending > div {
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-rows: repeat(4, calc(25%));
+  gap: 1rem;
+}
+
+main .trending article {
+  display: grid;
+  grid: 1fr 1fr / 50px 1fr;
+}
+
+main .trending img {
+  grid-row: 1 / -1;
 }
