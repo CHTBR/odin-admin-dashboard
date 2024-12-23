@@ -8,7 +8,7 @@ body, h1, h2, h3, p {
 body {
   height: 100vh;
   display: grid;
-  grid: 15% 85% / 1fr 4fr;
+  grid: 20% 80% / 1fr 4fr;
   grid-template-areas:
     "nav header"
     "nav main"
@@ -25,6 +25,25 @@ header {
   grid-area: header;
   display: grid;
   grid: 1fr 1fr / 2fr 1fr;
+}
+
+header .welcome-message {
+  display: grid;
+  grid: 1fr / 75px 1fr;
+  align-items: center;
+}
+
+header .account-functionality {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .site-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
 }
 
 nav {
@@ -138,7 +157,7 @@ main .trending > div {
 
 /* Search bar */
 .search-bar {
-  width: 500px;
+  width: 800px;
   height: 30px;
   display: flex;
   gap: 1rem;
@@ -149,7 +168,7 @@ main .trending > div {
 .search-bar input {
   padding-left: 1rem;
   height: 30px;
-  width: 450px;
+  width: 700px;
   appearance: none;
   border: none;
   border-radius: 20px;
