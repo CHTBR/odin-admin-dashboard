@@ -4,6 +4,12 @@ body, h1, h2, h3, p {
 }
 
 
+/* Variables */
+body {
+  --lh: 1.5rem;
+}
+
+
 /* Layout */
 body {
   height: 100vh;
@@ -13,6 +19,7 @@ body {
     "nav header"
     "nav main"
   ;
+  line-height: 1.5rem;
 }
 
 nav,
@@ -113,7 +120,7 @@ main .announcments > div {
 main .announcments article {
   overflow: hidden;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 1fr calc(2 * var(--lh));
 }
 
 main .trending {
@@ -159,10 +166,12 @@ main .your-projects article {
 }
 
 main .announcments > div {
+  border-radius: 10px;
   background-color: white;
 }
 
 main .trending > div {
+  border-radius: 10px;
   background-color: white;
 }
 
