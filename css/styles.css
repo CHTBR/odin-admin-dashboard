@@ -25,6 +25,7 @@ header {
   grid-area: header;
   display: grid;
   grid: 1fr 1fr / 2fr 1fr;
+  align-items: center;
 }
 
 header .welcome-message {
@@ -34,9 +35,12 @@ header .welcome-message {
 }
 
 header .account-functionality {
-  display: flex;
-  justify-content: space-around;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
   align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 header .site-actions {
@@ -87,6 +91,12 @@ main .your-projects > div {
 main .your-projects article {
   display: grid;
   grid-template-rows: 50px 1fr 50px;
+}
+
+main .your-projects article .project-actions {
+  justify-self: right;
+  display: grid;
+  grid-template-columns: repeat(3 ,50px);
 }
 
 main .announcments {
@@ -181,4 +191,110 @@ span.search-icon {
   background-repeat: no-repeat;
   height: 30px;
   width: 30px;
+}
+
+
+/* Buttons */
+button {
+  appearance: none;
+  color: white;
+  font-weight: bold;
+  background-color: #1ea3ea;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5em 1.5em;
+}
+
+button:focus,
+button:hover {
+  box-shadow: inset -5px -5px 0px black, inset 2px 2px 0px lightgrey;
+}
+
+button:active {
+  box-shadow: inset 5px 5px 0px black, inset -2px -2px 0px lightgrey;
+}
+
+nav button {
+  width: 100%;
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+main .your-projects button,
+header .account-functionality button {
+  padding: 0;
+  height: 100%;
+  color: black;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+/* Button Icons */
+button .icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  height: 90%;
+  aspect-ratio: 1 / 1;
+}
+
+header .account-functionality button {
+  height: 60%;
+}
+
+nav button .icon {
+  position: relative;
+  right: 10px;
+}
+
+button .home-icon {
+  background-image: url("../assets/icons/home.svg");
+}
+
+button .profile-icon {
+  background-image: url("../assets/icons/profile.svg");
+}
+
+button .messages-icon {
+  background-image: url("../assets/icons/messages.svg");
+}
+
+button .history-icon {
+  background-image: url("../assets/icons/history.svg");
+}
+
+button .tasks-icon {
+  background-image: url("../assets/icons/tasks.svg");
+}
+
+button .communities-icon {
+  background-image: url("../assets/icons/communities.svg");
+}
+
+button .settings-icon {
+  background-image: url("../assets/icons/settings.svg");
+}
+
+button .support-icon {
+  background-image: url("../assets/icons/support.svg");
+}
+
+button .privacy-icon {
+  background-image: url("../assets/icons/privacy.svg");
+}
+
+button .star-icon {
+  background-image: url("../assets/icons/star.svg");
+}
+
+button .watch-icon {
+  background-image: url("../assets/icons/watch.svg");
+}
+
+button .share-icon {
+  background-image: url("../assets/icons/share.svg");
+}
+
+button .notification-icon {
+  background-image: url("../assets/icons/notification.svg");
 }
