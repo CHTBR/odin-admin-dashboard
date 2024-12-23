@@ -134,3 +134,32 @@ main .announcments > div {
 main .trending > div {
   background-color: white;
 }
+
+
+/* Search bar */
+.search-bar {
+  width: 500px;
+  height: 30px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input {
+  padding-left: 1rem;
+  height: 30px;
+  width: 450px;
+  appearance: none;
+  border: none;
+  border-radius: 20px;
+  background-color: #eaeff2;
+}
+
+span.search-icon {
+  display: inline-block;
+  background-image: url("../assets/icons/magnify.svg");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+}
