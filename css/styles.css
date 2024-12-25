@@ -137,6 +137,7 @@ main .trending > div {
 
 main .trending article {
   display: grid;
+  column-gap: 1em;
   grid: 1fr 1fr / 50px 1fr;
 }
 
