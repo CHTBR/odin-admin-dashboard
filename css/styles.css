@@ -274,6 +274,7 @@ button {
 button:focus,
 button:hover {
   box-shadow: inset -5px -5px 0px black, inset 2px 2px 0px lightgrey;
+  cursor: pointer;
 }
 
 button:active {
